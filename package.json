@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "node --watch index.js",
+    "lint": "eslint .",
     "build:ui": "powershell -Command \"Remove-Item -Recurse -Force dist -ErrorAction SilentlyContinue; cd ../../part2/phonebook; npm run build; Copy-Item -Recurse dist ../../part3/phonebook-backend/dist\"",
     "deploy:full": "npm run build:ui && git add . && git commit -m \"Update frontend build\" && git push"
   },
@@ -19,5 +20,11 @@
     "express": "^5.3.0",
     "mongoose": "^9.12.1",
     "morgan": "^1.12.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@stylistic/eslint-plugin": "^6.0.0",
+    "eslint": "^10.15.0",
+    "globals": "^17.14.0"
   }
 }
