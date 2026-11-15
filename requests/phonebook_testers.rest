@@ -1,0 +1,32 @@
+### GET ALL PERSONS
+GET http://localhost:3001/api/persons
+
+### GET INFO
+GET http://localhost:3001/info
+
+### GET PERSON THAT EXISTS
+GET http://localhost:3001/api/persons/2
+
+### GET PERSON THAT DOES NOT EXIST
+GET http://localhost:3001/api/persons/999
+
+### DELETE PERSON
+DELETE http://localhost:3001/api/persons/2
+
+
+### BAD POST
+POST http://localhost:3001/api/persons/ HTTP/1.1
+content-type: application/json
+
+{
+    "name": "TEST"
+}
+
+### GOOD POST
+POST http://localhost:3001/api/persons/ HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Linus Torvalds",
+    "number": "040-5551234"
+}
